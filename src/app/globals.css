@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0F172A; /* Deep Blue / Slate */
+  --color-primary-light: #1E293B;
+  --color-secondary: #D4AF37; /* Luxury Gold */
+  --color-secondary-light: #F4C430;
+  --color-accent: #DC2626; /* Bold Red */
+  --color-accent-light: #EF4444;
+  --color-light: #FFFFFF;
+  --color-dark: #000000;
+  
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
+}
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #0F172A;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      /* Keep it corporate/luxury, maybe slight off-white for dark mode or mostly stick to the dark blue */
+      --background: #020617;
+      --foreground: #f8fafc;
+    }
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+}
+
+.heading-luxury {
+  font-family: var(--font-serif);
+  font-weight: 700;
+}
